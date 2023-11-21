@@ -1,0 +1,22 @@
+.so
+{
+    background-image: url("https://papers.co/wallpaper/papers.co-vc16-paper-creased-dark-texture-35-3840x2160-4k-wallpaper.jpg");
+
+    color:yellow;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;;
+    height:105vh;
+    font-size: x-large;
+}
+.sa
+{
+    font-size: "30px";
+    font-style: italic;
+    color:white;
+    background-color:black;; 
+}
+.su
+{
+    color: black;
+}
