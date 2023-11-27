@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { TextField, Button, Box } from '@mui/material';
 import { Link } from 'react-router-dom';
-
+import axios from 'axios'
 const Signup = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -10,9 +10,18 @@ const Signup = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
 
   const handleFormSubmit = (event) => {
-    event.preventDefault();
-    console.log('Form submitted with:', { name, email, createPassword, confirmPassword });
-  };
+    // event.preventDefault();
+    // console.log('Form submitted with:', { name, email, createPassword, confirmPassword });
+    const api = "http://localhost:3001/data";
+    axios.post(api,
+      {
+        username:name,
+        email:email,
+        password:createPassword
+      }
+      )
+      alert("Sign In Successfully")
+    }
 
   return (
     <Box
@@ -21,11 +30,11 @@ const Signup = () => {
       alignItems="center"
       justifyContent="center"
       height="100vh"
-      backgroundColor="black"
-      color="white"
+      backgroundColor="white"
+      color="black"
     >
       <h2>Sign Up Form</h2>
-      <form onSubmit={handleFormSubmit} style={{ width: '300px' }}>
+      <form style={{ width: '300px' }}>
         <TextField
           label="Name"
           variant="outlined"
@@ -33,7 +42,7 @@ const Signup = () => {
           fullWidth
           value={name}
           onChange={(e) => setName(e.target.value)}
-          InputProps={{ style: { color: 'white', backgroundColor: 'rgba(255, 255, 255, 0.1)' } }}
+          InputProps={{ style: { color: 'black' } }}
         />
         <TextField
           label="Mail Id"
@@ -42,7 +51,7 @@ const Signup = () => {
           fullWidth
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          InputProps={{ style: { color: 'white', backgroundColor: 'rgba(255, 255, 255, 0.1)' } }}
+          InputProps={{ style: { color: 'black'} }}
         />
         <TextField
           label="Create Password"
@@ -52,19 +61,10 @@ const Signup = () => {
           type="password"
           value={createPassword}
           onChange={(e) => setCreatePassword(e.target.value)}
-          InputProps={{ style: { color: 'white', backgroundColor: 'rgba(255, 255, 255, 0.1)' } }}
+          InputProps={{ style: { color: 'black' } }}
         />
-        <TextField
-          label="Confirm Password"
-          variant="outlined"
-          margin="normal"
-          fullWidth
-          type="password"
-          value={confirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}
-          InputProps={{ style: { color: 'white', backgroundColor: 'rgba(255, 255, 255, 0.1)' } }}
-        />
-        <Button type="submit" variant="text" color="primary" style={{ marginTop: '20px' }}>
+    
+        <Button type="submit" variant="text" color="primary" style={{ marginTop: '20px' }} onClick={handleFormSubmit}>
           <Link to="/login">sign In</Link>
         </Button>
       </form>

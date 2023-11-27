@@ -1,66 +1,155 @@
-import React from 'react'
-import "./FeaturedBrands.css"
-import { Link } from 'react-router-dom';
-import {  Container, Grid, Paper } from '@mui/material';
+import * as React from 'react';
+import { styled } from '@mui/material/styles';
+import Card from '@mui/material/Card';
+import CardHeader from '@mui/material/CardHeader';
+import CardMedia from '@mui/material/CardMedia';
+import CardContent from '@mui/material/CardContent';
+import CardActions from '@mui/material/CardActions';
+import Collapse from '@mui/material/Collapse';
+import Avatar from '@mui/material/Avatar';
+import IconButton, { IconButtonProps } from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import { red } from '@mui/material/colors';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import ShareIcon from '@mui/icons-material/Share';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
+import { Paper, Stack } from '@mui/material';
 
-const FeaturedBrands = () => {
+export default function FeaturedBrands()
+{
+
   return (
-    <>
+   <div style={{backgroundColor:'gray'}}> 
+    <marquee><h1>FLAT 20% OFF ON THE FOLLOWING TOP FEATURED BRANDS </h1></marquee>
+<div style={{backgroundColor:"gray"}} >
 
-    <div className='so'>
-      <Container>
-        <Grid container spacing={2}>
-          <Grid item xs = {4} >
-            <Paper sx={{width:"350px",height:"350px"}}>
-             
-              <img src='https://i.pinimg.com/736x/72/cc/db/72ccdbd4f3dac6e36cb1722dfc0d8fb1.jpg' style={{maxWidth:'100%'}}></img>
+    <Paper elevation={22} style={{margin:"50px",backgroundColor:"gray"}}>
+    <Stack direction="row" spacing={4} >
 
-            </Paper>
-          </Grid>
-          <Grid  item xs = {4}>
-            <Paper sx={{width:"350px",height:"350px"}}>
-              <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSUZ0bMgIaO11QIPZ83JGpCGUmHv2z4_MCzQ&usqp=CAU' style={{maxWidth:'100%',height:'350px'}}></img>
-            </Paper>
-          </Grid>
-          <Grid  item xs = {4} >
-            <Paper sx={{width:"350px",height:"350px"}}>
-              <img src='https://w0.peakpx.com/wallpaper/842/374/HD-wallpaper-puma-amoled-amoled-black-black-logo.jpg' style={{width:"100%",height:'350px'}}></img>
-
-            </Paper>
-          </Grid>
-
-          <Grid  item xs = {4} className='d'>
-            <Paper sx={{width:"350px",height:"350px"}}>
-          <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdcWIKfV2RAY7zsFwRd0wp7eU8yvqWtkSsRw&usqp=CAU' style={{width:"100%",height:"350px"}}></img>
-
-            </Paper>
-          </Grid >
-          <Grid  item xs = {4} className='e'>
-            <Paper sx={{width:"350px",height:"350px"}}>
-              <img src='https://m.media-amazon.com/images/I/71fXj+RIrKL._AC_UF1000,1000_QL80_.jpg' style={{width:"100%",height:"340px"}}></img>
-
-            </Paper>
-          </Grid  >
-          <Grid  item xs = {4} className='f'>
-            <Paper sx={{width:"350px",height:"350px"}}>
-            <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKTDHO4Yykr-JE3OBLQc8vyiDSKQU5ISg3Pg&usqp=CAU' style={{width:"100%",height:"350px"}}></img>
-
-            </Paper>
-          </Grid>
-        </Grid>
-      </Container>
+    <Card sx={{ width:"1500px",height:"300px"}}>
       
-      </div>
-      <div className='sa'>
-      <center>
-      <Link to="/">BACK TO HOME</Link>
-      </center>
-      </div>
-
-      </>
+      <CardMedia component="img"
+       height="300px" 
+       image="https://i.pinimg.com/474x/97/da/04/97da0412bcd589db41430cce60e228c3.jpg"
+      />
+     
+    </Card>
+    <Card sx={{ width:"1500px",height:"300px"}}>
       
+      <CardMedia component="img"
+       height="300px" 
+       image="https://i.pinimg.com/474x/2f/f4/b4/2ff4b4ebab30c52ce08117d57b19ac6b.jpg"
+      />
+     
+    </Card>
+    <Card sx={{ width:"1500px",height:"300px"}}>
+      
+      <CardMedia component="img"
+       height="300px" 
+       image="https://i.pinimg.com/474x/1b/c9/42/1bc942b6b48c2ee518192c4fb95d6483.jpg"
+      />
+     
+    </Card>
+    <Card sx={{ width:"1500px",height:"300px"}}>
+      
+      <CardMedia component="img"
+       height="300px" 
+       image="https://i.pinimg.com/474x/90/31/ea/9031ea7af104636e684019912688893a.jpg"
+      />
+     
+    </Card>
+
     
+    
+    
+   
+    </Stack>
+   <br></br>
+    <Stack direction="row" spacing={4}>
+
+    <Card sx={{ width:"1500px",height:"300px"}}>
+      
+      <CardMedia component="img"
+       height="300px" 
+       image="https://i.pinimg.com/474x/38/2d/66/382d66614145ec6ab289be10fd0686aa.jpg"
+      />
+     
+    </Card>
+    <Card sx={{ width:"1500px",height:"300px"}}>
+      
+      <CardMedia component="img"
+       height="300px" 
+       image="https://i.pinimg.com/474x/15/2b/c1/152bc19bd1fb78b2d232fd083ab63285.jpg"
+      />
+     
+    </Card>
+    <Card sx={{ width:"1500px",height:"300px"}}>
+      
+      <CardMedia component="img"
+       height="300px" 
+       image="https://i.pinimg.com/474x/a7/5f/89/a75f890966b1612695012d1772719b4c.jpg"
+      />
+     
+    </Card>
+    <Card sx={{ width:"1500px",height:"300px"}}>
+      
+      <CardMedia component="img"
+       height="300px" 
+       image="https://i.pinimg.com/474x/cc/bc/48/ccbc48b8ca0683cee844a1e0937c44f4.jpg"
+      />
+     
+    </Card>
+
+    
+    
+    
+   
+    </Stack>
+   <br></br>
+    <Stack direction="row" spacing={4}>
+
+    <Card sx={{ width:"1500px",height:"300px"}}>
+      
+      <CardMedia component="img"
+       height="300px" 
+       image="https://i.pinimg.com/736x/8f/06/95/8f0695797498365de0e3aaf06f9df980.jpg"
+      />
+     
+    </Card>
+    <Card sx={{ width:"1500px",height:"300px"}}>
+      
+      <CardMedia component="img"
+       height="300px" 
+       image="https://i.pinimg.com/474x/a8/f4/37/a8f437a435eb719baa5e8162b130e08e.jpg"
+      />
+     
+    </Card>
+    <Card sx={{ width:"1500px",height:"300px"}}>
+      
+      <CardMedia component="img"
+       height="300px" 
+       image="https://i.pinimg.com/474x/5c/a0/b5/5ca0b5f1741f2118deb6a718bbfb985f.jpg"
+      />
+     
+    </Card>
+    <Card sx={{ width:"1500px",height:"300px"}}>
+      
+      <CardMedia component="img"
+       height="300px" 
+       image="https://i.pinimg.com/474x/38/d9/67/38d9679ff1bf2a59bc5e51f58f1a5916.jpg"
+      />
+     
+    </Card>
+
+    
+    
+    
+   
+    </Stack>
+   
+    </Paper>
+    </div>
+    </div>
   );
 }
-
-export default FeaturedBrands
